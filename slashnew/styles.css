@@ -1,0 +1,1735 @@
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* Import Orbitron Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="styleshee');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbfbfb; 
+    overflow: visible !important;
+    padding-top: 80px; /* Adjust based on navbar height */
+
+}
+
+/* Navbar Custom Styles */
+.navbar {
+    color: #000000 !important;
+    border-color: #000000 !important;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold !important;
+    background: #ffffff !important; /* White background */
+}
+
+/* Force Navbar Links to Black and Bold */
+.navbar-nav .nav-link {
+    font-size: 16px !important;
+    font-weight: bold !important; /* Ensures Bold Text */
+    color: #000000 !important; /* Forces Black Text */
+    text-transform: uppercase; /* Optional: Makes Text Uppercase */
+    text-decoration: none !important; /* Remove Any Underline */
+}
+
+/* Navbar Link Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #333333 !important; /* Slightly Lighter Black on Hover */
+    text-decoration: underline !important; /* Adds Underline on Hover */
+}
+
+/* Ensure Navbar Background Stays Light */
+.navbar {
+    background-color: #ffffff !important;
+}
+
+/* Fix for Bootstrap Default Link Styling */
+.navbar a {
+    color: #000000 !important; /* Forces navbar links to stay black */
+    text-decoration: none !important;
+}
+
+/* Navbar Buttons Styling */
+.navbar .btn {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important; /* Smooth Rounded Edges */
+    transition: all 0.3s ease-in-out !important; /* Smooth Animation */
+}
+
+/* Contact Button */
+.navbar .btn-outline-primary {
+    color: #000000 !important; /* Deep Blue */
+    border: 2px solid #000000 !important; /* Thicker Border */
+    background: transparent !important;
+}
+
+.navbar .btn-outline-primary:hover {
+    background: #000000 !important; /* Solid Blue on Hover */
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(0, 74, 153, 0.3) !important; /* Subtle Glow */
+}
+
+/* Log-in Button */
+.navbar .btn-primary {
+    background: #000000 !important; /* Deep Blue */
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(0, 74, 153, 0.3) !important; /* Glow Effect */
+}
+
+.navbar .btn-primary:hover {
+    background: #ffffff !important; /* Darker Blue on Hover */
+    color: black !important;
+    box-shadow: 0 5px 12px rgba(0, 47, 102, 0.5) !important;
+}
+
+
+/* Sticky Navbar */
+.navbar.fixed-top {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Prevent background scroll when modal is open */
+body.modal-open {
+    overflow: hidden !important;
+    height: 100vh;
+    padding-right: 0 !important;
+}
+
+/* Ensure modal is fully centered */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Remove Scrollbar & Auto Height */
+.modal-content {
+    max-height: none;  /* Remove height restriction */
+    overflow-y: hidden; /* Ensure no scrollbar */
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fix for Large Modals */
+.modal-body {
+    max-height: 80vh;  /* Prevent excessive height */
+    overflow-y: auto;  /* Enable scrolling inside modal only if necessary */
+    padding: 20px;
+}
+
+/* Floating Placeholder Effect */
+.form-floating label {
+    transition: all 0.3s ease-in-out;
+    color: #999;
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #004a99;
+}
+
+/* Modal Header Styling */
+.modal-header {
+    background: #004a99;
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Submit Button */
+.btn-custom {
+    background: #004a99;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: #002f66;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Contact Hero Section */
+.contact-hero {
+    background: linear-gradient(45deg, #0d0d0d, #262626, #3a3a3a);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Contact Form and Map */
+.contact-container {
+    padding: 50px 0;
+}
+
+/* Google Map */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Info */
+.contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    color: #004a99;
+    font-weight: bold;
+}
+
+/* Input Fields Hover Effect */
+.form-input {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-input:hover,
+.form-input:focus {
+    border-color: #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Change Submit Button to Black */
+.btn-black {
+    background: #000 !important;  /* Black Background */
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-black:hover {
+    background: #333 !important; /* Slightly lighter black on hover */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 30px 15px;
+    }
+}
+
+
+
+/* =================== */
+/* FOOTER STYLING (With Gradient) */
+/* =================== */
+footer {
+    background: linear-gradient(45deg, #0d0d0d, #262626, #3a3a3a);
+    color: #E0E6ED; /* Light Gray */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+}
+/* Footer Section */
+.footer {
+    background-color: #000000; /* Dark footer background */
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust space between icons */
+    margin-bottom: 10px;
+}
+
+/* Social Links */
+.social-link {
+    display: inline-block;
+    text-decoration: none; /* Ensure no underline or symbols */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Social Icons */
+.social-link img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Remove Extra Space Between Inline-Block Elements */
+.social-icons a {
+    font-size: 0; /* Removes unintended whitespace */
+    line-height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Top Hero Section with Gradient & Corporate Shapes */
+.top-hero {
+    background: linear-gradient(135deg, #000428, #004e92); /* Deep navy to corporate blue */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corporate Shape Elements */
+.top-hero::before, 
+.top-hero::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07); /* Subtle white transparency */
+    transform: rotate(25deg);
+}
+
+/* First Shape (Top Left) */
+.top-hero::before {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 5%;
+    border-radius: 50%;
+}
+
+/* Second Shape (Bottom Right) */
+.top-hero::after {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 20px;
+}
+
+/* Floating Animation */
+@keyframes floatShapes {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+.top-hero::before, 
+.top-hero::after {
+    animation: floatShapes 6s infinite ease-in-out;
+}
+
+/* Text Styling */
+.top-hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.top-hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #ddd;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button Styling */
+.top-hero .btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.top-hero .btn-outline-light:hover {
+    background: #fff;
+    color: #004e92;
+}
+
+.top-hero .btn-light {
+    background: #fff;
+    color: #004e92;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.top-hero .btn-light:hover {
+    background: #FFD700; /* Gold effect */
+    color: #000428;
+}
+
+
+.hero-section {
+    background: #F8F9FA;
+    padding: 80px 0;
+}
+
+/* Top Section - Corporate Design */
+.top-section {
+    background: linear-gradient(135deg, #000 10%, #002f66 90%); /* Dark gradient */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* Corporate Shapes */
+.top-section::before,
+.top-section::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(45deg);
+}
+
+/* Left Shape */
+.top-section::before {
+    top: -40px;
+    left: -40px;
+}
+
+/* Right Shape */
+.top-section::after {
+    bottom: -40px;
+    right: -40px;
+}
+
+/* Centered Text */
+.top-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.top-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.top-section .btn-outline-light {
+    border-width: 2px;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-section .btn-outline-light:hover {
+    background: white;
+    color: #002f66;
+}
+
+/* Bottom Section - Corporate Design */
+.bottom-section {
+    background: linear-gradient(135deg, #111 10%, #004a99 90%); /* Gradient */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corporate Shapes */
+.bottom-section::before,
+.bottom-section::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+}
+
+.bottom-section::before {
+    top: -30px;
+    left: -30px;
+}
+
+.bottom-section::after {
+    bottom: -30px;
+    right: -30px;
+}
+
+/* Centered Text */
+.bottom-section h2 {
+    font-size: 2rem;
+}
+
+.bottom-section p {
+    font-size: 1.2rem;
+}
+
+/* Button Styling */
+.bottom-section .btn-outline-light {
+    border-width: 2px;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottom-section .btn-outline-light:hover {
+    background: white;
+    color: #004a99;
+}
+
+
+/* About Section Styling */
+#about-section {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Image Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#about-image {
+    width: 100%; /* Makes sure it takes the full width of the container */
+    max-width: 400px; /* Prevents it from getting too large */
+    height: auto; /* Ensures aspect ratio is maintained */
+    object-fit: cover; /* Ensures uniform size without distortion */
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Subtitles List */
+.about-subtitles {
+    list-style: none;
+    padding: 0;
+}
+
+/* Subtitle Styling */
+.subtitle {
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* Default Subtitle Styling */
+.subtitle span {
+    transition: color 0.5s ease-in-out;
+}
+
+/* Active Subtitle Highlighting */
+.subtitle.active {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Make the text bold when active */
+.subtitle.active span {
+    color: #004a99;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+#top-service {
+    background: #ffffff; /* Keep background dark */
+    color: rgb(0, 0, 0); /* Set text color to white */
+    padding: 80px 0;
+    
+}
+
+#top-service h2,
+#top-service p,
+#top-service strong {
+    color: rgb(0, 0, 0) !important;
+}
+
+#top-service .btn-outline-dark {
+    color: rgb(0, 0, 0) !important;
+    border-color: rgb(0, 0, 0) !important;
+}
+
+#top-service .btn-outline-dark:hover {
+    background: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.mid-service {
+    background: linear-gradient(45deg, #0d0d0d, #262626, #3a3a3a);    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255) !important; /* Set text color to black */
+}
+
+.mid-service p,
+.mid-service strong,
+.mid-service a {
+    color: rgb(255, 255, 255) !important; /* Ensure all text is black */
+}
+
+.mid-service a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+
+
+/* General Section Styling */
+.pricing-section {
+    background-color: #f8f9fc;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.pricing-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Toggle Button */
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #ddd;
+    color: #222;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.toggle-btn.active {
+    background: #004a99;
+    color: white;
+}
+
+/* Pricing Card Layout */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+    border: 3px solid #004a99;
+}
+
+/* Pricing Text */
+.pricing-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004a99;
+    margin-bottom: 5px;
+}
+
+.billing-cycle {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features li {
+    font-size: 1rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+.features li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: #004a99;
+}
+
+/* CTA Buttons */
+.btn-primary {
+    display: inline-block; /* Ensures buttons are only as wide as their content */
+    padding: 10px 20px; /* Standard padding */
+    background: #004a99;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1px; /* Reduce margin */
+    transition: background 0.3s;    
+}
+
+
+
+.btn-primary:hover {
+    background: #002f66;
+}
+
+/* AIX Experience Section */
+.aix-experience {
+    margin: 40px auto; /* Centers the section */
+    padding: 40px 0; /* Reduce height */
+    background: linear-gradient(45deg, #0d0d0d, #262626, #3a3a3a);
+    animation: gradientAnimation 6s infinite alternate;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 900px; /* Limits the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* AIX Cards Layout */
+.aix-pricing {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* More space between cards */
+    flex-wrap: wrap;
+    margin-top: 10px; /* Reduce gap above cards */
+}
+
+/* AIX Cards */
+.aix-card {
+    background: white;
+    color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center; /* Center everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card Title */
+.aix-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Pricing */
+.aix-card .price {
+    color: #004a99;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Get Started Button - Centered */
+.aix-card .btn {
+    margin-top: auto; /* Pushes button to bottom */
+    width: 100%; /* Full width */
+    max-width: 200px; /* Consistent button width */
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    background: #1a1a1a; /* Dark button */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.aix-card .btn:hover {
+    background: #ffffff; /* Blue hover effect */
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+/* ===== Services Section ===== */
+#services {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.service-box {
+    width: 300px;
+    height: 100px; /* Default height */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out, height 0.4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.service-box img {
+    display: block; /* Show images initially */
+    width: 90px; /* Keep images small */
+    height: auto;
+    margin-bottom: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+.service-title {
+    font-family: 'Poppins', sans-serif; /* Modern & engaging font */
+    font-size: 20px; /* Slightly bigger */
+    font-weight: 700; /* Bolder for emphasis */
+    color: #1A2C4A; /* Darker shade for better contrast */
+    text-transform: uppercase; /* Makes it more engaging */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Service Bio - Hidden by Default */
+.service-details {
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    color: #23394B; /* Lighter shade of blue */
+    text-align: left;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    background: #23394B;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.learn-more-btn:hover {
+    background: #FF6B35;
+}
+
+.service-box:hover {
+    height: auto;
+    padding: 20px;
+    background: #F8F9FA;
+    transform: scale(1.05);
+}
+
+/* Ensure the title remains visible, but not the image */
+.service-box:hover img {
+    opacity: 0; /* Hide image smoothly */
+}
+
+
+
+/* Show Bio and Button on Hover */
+.service-box:hover .service-details {
+    display: block;
+}
+
+/* Slightly Change Title Color on Hover */
+.service-box:hover .service-title {
+    color: #1A2C4A;
+}
+
+@media (max-width: 900px) {
+    .service-popup-container {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-popup-container {
+        width: 95%;
+        max-width: 500px;
+    }
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.service-popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95); /* Brighter background */
+    color: #23394B;
+    padding: 30px;
+    width: 700px; /* Adjusted from 500px */
+    max-width: 90vw; /* Ensures it doesn't exceed screen width */
+    max-height: 80vh;
+    overflow-y: auto; /* Enables scrolling */
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FF6B35;
+}
+.service-popup-container {
+    max-height: none; /* Removes height restriction */
+    overflow-y: visible; /* Prevents unnecessary scroll */
+}
+
+.service-popup-content {
+    max-height: 70vh; /* Limit content area */
+    overflow-y: auto; /* Enables scrolling within content */
+    padding-right: 15px; /* Avoids content touching scrollbar */
+}
+
+
+.service-popup-content img {
+    display: block;
+    width: 120px; /* Adjust to fit inside the pop-up */
+    height: auto;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+}
+
+
+/* Popup Text */
+.service-popup-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A2C4A;
+}
+
+.service-popup-content p {
+    font-size: 16px;
+    color: #3C536B;
+    line-height: 1.6;
+}
+
+/* Fade-in Animation */
+.service-popup-container.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Background Overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+.letter-list {
+    list-style-type: lower-alpha; /* A, B, C, D */
+    padding-left: 20px; /* Indents the list */
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* Title Styling */
+#services h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #282c33;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* Service Section Subtitle */
+#services .service-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #282c33;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    max-width: 900px;
+    margin: 10px auto 30px;
+    line-height: 1.6;
+}
+
+
+
+/* Show title when in view */
+#services.show h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Subtitle Styling - Services Section */
+#services p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #23394B; /* Light gray color */
+    text-align: justify;
+    letter-spacing: 1px;
+    max-width: 5000px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(-10px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Show subtitle when in view */
+#services.show p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Service Box Styling */
+.service-box {
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 1s ease-out;
+}
+
+/* Right Side Boxes */
+.service-box:nth-child(odd) {
+    transform: translateX(-100px); /* Merge from left */
+}
+
+.service-box:nth-child(even) {
+    transform: translateX(100px); /* Merge from right */
+}
+
+/* Show effect when in view */
+#services.show .service-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Style the pricing table inside popups */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 12px; /* Increase padding */
+    font-size: 16px; /* Make text more readable */
+}
+
+.pricing-table th {
+    background-color: #23394B;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.clients-section {
+    background: #ffffff;
+    padding: 100px 0;
+}
+.client-images {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+.client-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.client-logos img {
+    max-width: 120px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+.client-logos img:hover {
+    opacity: 1;
+}
+@keyframes scrollClients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.client-slider {
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    white-space: nowrap;
+    margin: 0 auto; /* Center align */
+
+    padding: 20px 0; /* Added padding to create more vertical space */
+}
+
+/* Added Fading Effect */
+.client-slider::before,
+.client-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10%; /* Adjust this value to match the title length */
+    height: 100%;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+.client-slider::before {
+    left: 0;
+}
+
+.client-slider::after {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrollClients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.client-track {
+    display: flex;
+    gap: 40px; /* Space between images */
+    animation: scrollClients 20s linear infinite; /* Adjust speed as needed */
+    width: max-content;
+}
+
+/* Ensure all client logos are sized correctly */
+.client-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Added spacing between buttons and images */
+.client-buttons {
+    margin-bottom: 50px; /* Adjust the spacing below the buttons */
+}
+.clients-section {
+    position: relative; /* Needed for absolute positioning */
+    background: #fdfdfd;
+    padding: 80px 0;
+    overflow: hidden; /* Prevents shapes from overflowing */
+}
+
+/* Left Shape */
+.clients-section::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.1); /* Light blue shape */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Right Shape */
+.clients-section::after {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    right: -60px;
+    width: 120px;
+    height: 120px;
+    background: rgba(9, 9, 9, 0.2); /* Gold shape */
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%); /* Triangle */
+    z-index: -1;
+}
+.shape-left {
+    position: absolute;
+    top: 5%;
+    left: -50px;
+    width: 120px;
+    opacity: 0.2; /* Make it subtle */
+}
+
+.shape-right {
+    position: absolute;
+    bottom: 10%;
+    right: -60px;
+    width: 150px;
+    opacity: 0.2;
+}
+
+
+
+
+
+
+/*CHATBOT*/
+.chat-container {
+    width: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-message {
+    background: #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    text-align: right;
+}
+
+.bot-message {
+    background: #eee;
+}
+/* Floating Chatbot Icon - More Visible & Fixed */
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222222; /* Bright Blue */
+    border-radius: 50%;
+    width: 65px; /* Bigger size */
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Ensures it stays on top */
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Ensure chatbot icon remains visible and does not overlap */
+#chatbot-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Hover Effect */
+#chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #222222; /* Darker shade on hover */
+}
+
+/* Chatbot Popup - Ensure it stays fixed */
+#chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10000; /* Ensures it's above all content */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* Chatbot Header */
+#chatbot-header {
+    background: #222222;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px 12px 0 0;
+}
+
+.chatbot-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Close Button */
+#close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Chatbox */
+#chatbox {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Messages */
+.chat-message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #222222;
+    color: white;
+    align-self: flex-end;
+    max-width: fit-content;  /* Make box fit the text */
+    padding: 6px 12px;  /* Adjust padding for better spacing */
+    word-wrap: break-word;  /* Ensure long words wrap properly */
+    display: inline-block; /* Ensure box only takes necessary width */
+}
+
+
+.bot-message {
+    background: #eee;
+    align-self: flex-start;
+}
+
+/* Chat Input */
+#chat-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+#send-btn {
+    background: #222222;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    border-color: black !important;
+
+}
+
+#send-btn:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: black !important;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    display: none; /* Initially hidden */
+}
+
+/* Show label on hover */
+#chatbot-icon:hover .chat-label {
+    display: inline;
+}
+
+
+
+
+/* Chatbot message typing effect */
+.bot-message.typing {
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Delay effect */
+.bot-message {
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated Questions Bar */
+.question-toggle-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #525862, #c8e0f8); /* Matching Slash BOT Bar */
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px 8px 0 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.question-toggle-btn:hover {
+    background: linear-gradient(135deg, #c8e0f8, #525862);
+    transform: scale(1.02);
+}
+
+/* When expanded, rotate the icon */
+.chatbot-questions.show + .question-toggle-btn::after {
+    transform: rotate(180deg);
+}
+
+
+/* Hide question list by default */
+.chatbot-questions {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.chatbot-questions button {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+}
+
+.chatbot-questions button:hover {
+    background: #e0e0e0;
+}
+
+/* Class to show questions */
+.chatbot-questions.show {
+    display: flex;
+}
+
+
+#chatbot-privacy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+#agree-privacy-chatbot {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#agree-privacy-chatbot:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
